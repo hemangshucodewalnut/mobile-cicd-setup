@@ -1,0 +1,18 @@
+*.iml
+.gradle
+local.properties
+.idea
+.DS_Store
+build
+captures
+.externalNativeBuild
+
+# WDIO / Appium
+e2e_tests/node_modules
+e2e_tests/build/
+e2e_tests/allure-results/
+e2e_tests/errorShots/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.wdio-log.log*
