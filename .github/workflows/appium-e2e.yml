@@ -46,19 +46,17 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       # ✅ ADD THIS: Extract Unit Test Counts
-      - name: Extract E2E Results
-        working-directory: e2e_tests
+      - name: Extract Unit Test Results
         run: |
-          # Point exactly to the file defined in wdio.browserstack.conf.ts
-          REPORT="./reports/test-results.json"
+          REPORT=$(find ./unit-results -name "*.xml")
 
-          TOTAL=$(jq '.metrics.total' $REPORT)
-          PASSED=$(jq '.metrics.passed' $REPORT)
-          FAILED=$(jq '.metrics.failed' $REPORT)
+          TOTAL=$(grep -o 'tests="[0-9]*"' $REPORT | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+          FAILURES=$(grep -o 'failures="[0-9]*"' $REPORT | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+          PASSED=$((TOTAL - FAILURES))
 
-          echo "E2E_TOTAL=$TOTAL" >> $GITHUB_ENV
-          echo "E2E_PASSED=$PASSED" >> $GITHUB_ENV
-          echo "E2E_FAILED=$FAILED" >> $GITHUB_ENV
+          echo "UNIT_TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "UNIT_PASSED=$PASSED" >> $GITHUB_ENV
+          echo "UNIT_FAILED=$FAILURES" >> $GITHUB_ENV
 
       # ✅ Upload APK to BrowserStack
       - name: Upload APK to BrowserStack
