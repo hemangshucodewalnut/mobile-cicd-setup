@@ -36,7 +36,7 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ✅ ADD THIS: Download unit test results
+      # ✅ Download Unit Test Results
       - name: Download Unit Test Results
         uses: actions/download-artifact@v4
         with:
@@ -44,6 +44,36 @@ jobs:
           path: ./unit-results
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ✅ NEW STEP: Extract Unit Test Results
+      - name: Extract Unit Test Results
+        run: |
+          # Find all JUnit XML report files
+          REPORTS=$(find ./unit-results -name "*.xml")
+          
+          if [ -z "$REPORTS" ]; then
+            echo "UNIT_TOTAL=0" >> $GITHUB_ENV
+            echo "UNIT_PASSED=0" >> $GITHUB_ENV
+            echo "UNIT_FAILED=0" >> $GITHUB_ENV
+            exit 0
+          fi
+
+          # Sum up results from multiple files if they exist
+          TOTAL=0
+          FAILURES=0
+          
+          for REPORT in $REPORTS; do
+            T=$(grep -o 'tests="[0-9]*"' "$REPORT" | head -1 | grep -o '[0-9]*')
+            F=$(grep -o 'failures="[0-9]*"' "$REPORT" | head -1 | grep -o '[0-9]*')
+            TOTAL=$((TOTAL + T))
+            FAILURES=$((FAILURES + F))
+          done
+          
+          PASSED=$((TOTAL - FAILURES))
+
+          echo "UNIT_TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "UNIT_PASSED=$PASSED" >> $GITHUB_ENV
+          echo "UNIT_FAILED=$FAILURES" >> $GITHUB_ENV
 
       # ✅ Upload APK to BrowserStack
       - name: Upload APK to BrowserStack
