@@ -34,7 +34,7 @@ export const config: WebdriverIO.Config = {
       "appium:platformVersion":
         process.env.BROWSERSTACK_ANDROID_PLATFORM_VERSION || "14.0",
       "appium:automationName": "UiAutomator2",
-      "appium:app": process.env.BROWSERSTACK_APP_ID_Android,
+      "appium:app": process.env.BROWSERSTACK_APP_ID,
       'appium:autoGrantPermissions': true,
 
       "bstack:options": {
