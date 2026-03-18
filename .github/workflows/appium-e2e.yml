@@ -24,10 +24,10 @@ jobs:
         working-directory: e2e_tests
         run: npm install
 
-      # ✅ Install jq (required for parsing API response)
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      # ✅ Download APK
       - name: Download APK Artifact
         uses: actions/download-artifact@v4
         with:
@@ -35,6 +35,30 @@ jobs:
           path: ./app-artifact
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ✅ ADD THIS: Download unit test results
+      - name: Download Unit Test Results
+        uses: actions/download-artifact@v4
+        with:
+          name: unit-test-results
+          path: ./unit-results
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ✅ ADD THIS: Extract Unit Test Counts
+      - name: Extract E2E Results
+        working-directory: e2e_tests
+        run: |
+          # Point exactly to the file defined in wdio.browserstack.conf.ts
+          REPORT="./reports/test-results.json"
+
+          TOTAL=$(jq '.metrics.total' $REPORT)
+          PASSED=$(jq '.metrics.passed' $REPORT)
+          FAILED=$(jq '.metrics.failed' $REPORT)
+
+          echo "E2E_TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "E2E_PASSED=$PASSED" >> $GITHUB_ENV
+          echo "E2E_FAILED=$FAILED" >> $GITHUB_ENV
 
       # ✅ Upload APK to BrowserStack
       - name: Upload APK to BrowserStack
@@ -45,23 +69,14 @@ jobs:
           -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
           -F "file=@../app-artifact/app-debug.apk")
 
-          echo "Upload Response: $RESPONSE"
-
           APP_URL=$(echo $RESPONSE | jq -r '.app_url')
 
           if [ -z "$APP_URL" ] || [ "$APP_URL" = "null" ]; then
-            echo "❌ App upload failed. Exiting..."
             exit 1
           fi
 
-          echo "✅ App uploaded successfully: $APP_URL"
           echo "APP_URL=$APP_URL" >> $GITHUB_ENV
 
-      # ✅ Debug (optional but useful)
-      - name: Debug App URL
-        run: echo "App URL is $APP_URL"
-
-      # ✅ Run Appium Tests with correct env mapping
       - name: Run Appium Tests
         working-directory: e2e_tests
         run: npx wdio run wdio.browserstack.conf.ts
@@ -69,3 +84,33 @@ jobs:
           BROWSERSTACK_APP_ID_Android: ${{ env.APP_URL }}
           BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
           BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+
+      # ✅ ADD THIS: Extract E2E Results
+      - name: Extract E2E Results
+        working-directory: e2e_tests
+        run: |
+          REPORT=$(find . -name "*.json")
+
+          TOTAL=$(jq '[.[].tests | length] | add' $REPORT)
+          PASSED=$(jq '[.[].tests[] | select(.state=="passed")] | length' $REPORT)
+          FAILED=$(jq '[.[].tests[] | select(.state=="failed")] | length' $REPORT)
+
+          echo "E2E_TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "E2E_PASSED=$PASSED" >> $GITHUB_ENV
+          echo "E2E_FAILED=$FAILED" >> $GITHUB_ENV
+
+      # ✅ IMPORTANT: Upload summary for email workflow
+      - name: Save Summary
+        run: |
+          echo "UNIT_TOTAL=${{ env.UNIT_TOTAL }}" >> summary.txt
+          echo "UNIT_PASSED=${{ env.UNIT_PASSED }}" >> summary.txt
+          echo "UNIT_FAILED=${{ env.UNIT_FAILED }}" >> summary.txt
+          echo "E2E_TOTAL=${{ env.E2E_TOTAL }}" >> summary.txt
+          echo "E2E_PASSED=${{ env.E2E_PASSED }}" >> summary.txt
+          echo "E2E_FAILED=${{ env.E2E_FAILED }}" >> summary.txt
+
+      - name: Upload Summary Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-summary
+          path: summary.txt

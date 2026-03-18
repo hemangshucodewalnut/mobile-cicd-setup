@@ -1,0 +1,53 @@
+name: Email Report
+
+on:
+  workflow_run:
+    workflows: ["Appium E2E Tests"]
+    types:
+      - completed
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Summary
+        uses: actions/download-artifact@v4
+        with:
+          name: test-summary
+          path: ./summary
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read Summary
+        run: |
+          cat ./summary/summary.txt >> $GITHUB_ENV
+
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "CI Pipeline Report"
+          to: ${{ secrets.EMAIL_TO }}
+          from: GitHub Actions
+          body: |
+            🚀 CI Pipeline Summary
+
+            🧪 Unit Tests:
+            - Total: ${{ env.UNIT_TOTAL }}
+            - Passed: ${{ env.UNIT_PASSED }}
+            - Failed: ${{ env.UNIT_FAILED }}
+
+            🤖 E2E Tests:
+            - Total: ${{ env.E2E_TOTAL }}
+            - Passed: ${{ env.E2E_PASSED }}
+            - Failed: ${{ env.E2E_FAILED }}
+
+            📌 Final Status: ${{ github.event.workflow_run.conclusion }}
+
+            🔗 Logs:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}

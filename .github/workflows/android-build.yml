@@ -34,6 +34,13 @@ jobs:
         run: |
           ./gradlew test
 
+      # ✅ ADD THIS STEP
+      - name: Upload Unit Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: app/build/test-results/
+
       - name: Build Debug APK
         run: |
           ./gradlew assembleDebug
