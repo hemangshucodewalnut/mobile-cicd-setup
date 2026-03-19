@@ -88,6 +88,8 @@ jobs:
             exit 1
           fi
           echo "APP_URL=$APP_URL" >> $GITHUB_ENV
+          
+
       - name: Run Appium Tests
         working-directory: e2e_tests
         run: npx wdio run wdio.browserstack.conf.ts
@@ -129,6 +131,7 @@ jobs:
           echo "E2E_TOTAL=${{ env.E2E_TOTAL }}" >> summary.txt
           echo "E2E_PASSED=${{ env.E2E_PASSED }}" >> summary.txt
           echo "E2E_FAILED=${{ env.E2E_FAILED }}" >> summary.txt
+
       - name: Upload Summary Artifact
         uses: actions/upload-artifact@v4
         with:

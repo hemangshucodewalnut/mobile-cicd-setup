@@ -86,7 +86,14 @@ export const config: WebdriverIO.Config = {
 
   framework: "mocha",
 
-  reporters: ["spec"],
+  reporters: [
+
+    ['json', {
+      outputDir: './reports',
+      outputFileFormat: () => `test-results.json`
+    }]
+
+  ],
 
   mochaOpts: {
     ui: "bdd",

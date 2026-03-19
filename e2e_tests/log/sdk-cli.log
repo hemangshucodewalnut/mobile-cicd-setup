@@ -1,0 +1,1037 @@
+2026-03-18T11:49:18.073Z CLI info [main]     Server listening on port: 5400
+2026-03-18T11:49:18.114Z CLI info     Config : {"platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773834552957","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":true,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T04:37:53.016Z CLI info [main]     Server listening on port: 5400
+2026-03-19T04:37:53.049Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:app":"bs://b70434a34ef12b79737b11fc68f59497e278e4a6","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773895069442","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":false,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T04:37:53.068Z CLI info     Should start debug utility: undefined
+2026-03-19T04:37:53.071Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Starting testhub from 3608:0
+2026-03-19T04:37:53.072Z CLI info  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-03-19T04:37:53.074Z CLI info  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-03-19T04:37:53.762Z CLI info  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-03-19T04:37:53.763Z CLI info  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-03-19T04:37:53.763Z CLI info  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-03-19T04:37:53.937Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  startBuild: response=rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q
+2026-03-19T04:37:53.938Z CLI info  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:37:55.795Z CLI info [sdk:service]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Driver initialized as primary driver: platformIndex=0
+2026-03-19T04:38:13.536Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6',
+    integrations: { browserstack: [Object] }
+  }
+} to 3608:0
+2026-03-19T04:38:13.538Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-03-19T04:38:13.511Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 3608:0
+2026-03-19T04:38:14.031Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6',
+      integrations: [Object]
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-03-19T04:38:13.511Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 3608:0
+2026-03-19T04:38:14.032Z CLI info  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:38:14.346Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.0","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"TODO Application E2E - should create a new task successfully","test_name":"should create a new task successfully","test_code":"async()=>{const addButton=await $('android=new UiSelector().text(\"New Task\")')}","test_file_path":"e2e_tests\\test\\specs\\todo.spec.ts","test_location":"test\\specs\\todo.spec.ts","test_scope":"TODO Application E2E - should create a new task successfully","test_scopes":["TODO Application E2E"],"test_started_at":"2026-03-19T04:38:13.511Z","automate_session_name":"TODO Application E2E - should create a new task successfully","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-03-19T04:38:14.343Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-03-19T04:38:14.347Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'passed',
+    duration_in_ms: 832,
+    started_at: '2026-03-19T04:38:13.511Z',
+    finished_at: '2026-03-19T04:38:14.343Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 3608:0
+2026-03-19T04:38:16.031Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '1cfc4fb5-11b3-429c-a5ca-ed7d317ecdb6',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'passed',
+      duration_in_ms: 832,
+      started_at: '2026-03-19T04:38:13.511Z',
+      finished_at: '2026-03-19T04:38:14.343Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 3608:0
+2026-03-19T04:38:16.032Z CLI info  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:38:17.292Z CLI info  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-03-19T04:38:17.296Z CLI info  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-03-19T04:38:18.044Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  stopBuild: rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q request={"finished_at":"2026-03-19T04:38:17.291Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-03-19T04:38:18.045Z CLI info  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:38:19.111Z CLI info [TEST REPORTING AND ANALYTICS:module]  [hemangshucodewal_63nAtw]  [rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q]  [c5242d5f-3c92-4d0e-ba3a-a2ba743b4ca3]  Visit https://automation.browserstack.com/builds/rtua8mrnhd6sirh5wyzuqvhrn5o2hxyayiqw352q to view build report, insights, and many more debugging information all at one place!
+2026-03-19T04:45:26.221Z CLI info [main]     Server listening on port: 5400
+2026-03-19T04:45:26.258Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:app":"bs://b70434a34ef12b79737b11fc68f59497e278e4a6","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773895523031","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":false,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T04:45:26.271Z CLI info     Should start debug utility: undefined
+2026-03-19T04:45:26.274Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Starting testhub from 9532:0
+2026-03-19T04:45:26.276Z CLI info  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-03-19T04:45:26.278Z CLI info  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-03-19T04:45:26.916Z CLI info  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-03-19T04:45:26.917Z CLI info  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-03-19T04:45:26.918Z CLI info  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-03-19T04:45:27.411Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  startBuild: response=ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb
+2026-03-19T04:45:27.413Z CLI info  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:45:29.558Z CLI info [sdk:service]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Driver initialized as primary driver: platformIndex=0
+2026-03-19T04:45:51.127Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '274a220e-5fb6-4505-90ea-27d5d1d0ea3e',
+    integrations: { browserstack: [Object] }
+  }
+} to 9532:0
+2026-03-19T04:45:51.130Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '274a220e-5fb6-4505-90ea-27d5d1d0ea3e',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-03-19T04:45:51.096Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 9532:0
+2026-03-19T04:45:51.495Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '274a220e-5fb6-4505-90ea-27d5d1d0ea3e',
+      integrations: [Object]
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '274a220e-5fb6-4505-90ea-27d5d1d0ea3e',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-03-19T04:45:51.096Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 9532:0
+2026-03-19T04:45:51.496Z CLI info  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:45:51.997Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.0","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"274a220e-5fb6-4505-90ea-27d5d1d0ea3e","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"TODO Application E2E - should create a new task successfully","test_name":"should create a new task successfully","test_code":"async()=>{const addButton=await $('android=new UiSelector().text(\"New Task\")')}","test_file_path":"e2e_tests\\test\\specs\\todo.spec.ts","test_location":"test\\specs\\todo.spec.ts","test_scope":"TODO Application E2E - should create a new task successfully","test_scopes":["TODO Application E2E"],"test_started_at":"2026-03-19T04:45:51.096Z","automate_session_name":"TODO Application E2E - should create a new task successfully","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-03-19T04:45:51.992Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-03-19T04:45:51.999Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '274a220e-5fb6-4505-90ea-27d5d1d0ea3e',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'passed',
+    duration_in_ms: 896,
+    started_at: '2026-03-19T04:45:51.096Z',
+    finished_at: '2026-03-19T04:45:51.992Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 9532:0
+2026-03-19T04:45:53.498Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '274a220e-5fb6-4505-90ea-27d5d1d0ea3e',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'passed',
+      duration_in_ms: 896,
+      started_at: '2026-03-19T04:45:51.096Z',
+      finished_at: '2026-03-19T04:45:51.992Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 9532:0
+2026-03-19T04:45:53.499Z CLI info  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:45:54.210Z CLI info  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-03-19T04:45:54.214Z CLI info  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-03-19T04:45:54.916Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  stopBuild: ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb request={"finished_at":"2026-03-19T04:45:54.209Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-03-19T04:45:54.918Z CLI info  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:45:55.204Z CLI info [TEST REPORTING AND ANALYTICS:module]  [hemangshucodewal_63nAtw]  [ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb]  [d7eb3880-e52f-41b5-a46a-a41343b2d5c8]  Visit https://automation.browserstack.com/builds/ozssqj53zujkd60wkxhtkd0x6qyqcpgoqkehl9eb to view build report, insights, and many more debugging information all at one place!
+2026-03-19T04:48:08.798Z CLI info [main]     Server listening on port: 5400
+2026-03-19T04:48:08.837Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:app":"bs://b70434a34ef12b79737b11fc68f59497e278e4a6","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773895685528","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":false,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T04:48:08.851Z CLI info     Should start debug utility: undefined
+2026-03-19T04:48:08.854Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Starting testhub from 16176:0
+2026-03-19T04:48:08.855Z CLI info  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-03-19T04:48:08.857Z CLI info  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-03-19T04:48:09.535Z CLI info  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-03-19T04:48:09.536Z CLI info  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-03-19T04:48:09.536Z CLI info  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-03-19T04:48:09.795Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  startBuild: response=5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb
+2026-03-19T04:48:09.797Z CLI info  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:48:11.978Z CLI info [sdk:service]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Driver initialized as primary driver: platformIndex=0
+2026-03-19T04:48:30.312Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '03470f13-31bd-47d1-8659-50477d49157c',
+    integrations: { browserstack: [Object] }
+  }
+} to 16176:0
+2026-03-19T04:48:30.315Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '03470f13-31bd-47d1-8659-50477d49157c',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-03-19T04:48:30.279Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 16176:0
+2026-03-19T04:48:31.131Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.0","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"03470f13-31bd-47d1-8659-50477d49157c","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"TODO Application E2E - should create a new task successfully","test_name":"should create a new task successfully","test_code":"async()=>{const addButton=await $('android=new UiSelector().text(\"New Task\")')}","test_file_path":"e2e_tests\\test\\specs\\todo.spec.ts","test_location":"test\\specs\\todo.spec.ts","test_scope":"TODO Application E2E - should create a new task successfully","test_scopes":["TODO Application E2E"],"test_started_at":"2026-03-19T04:48:30.279Z","automate_session_name":"TODO Application E2E - should create a new task successfully","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-03-19T04:48:31.126Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-03-19T04:48:31.133Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '03470f13-31bd-47d1-8659-50477d49157c',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'passed',
+    duration_in_ms: 847,
+    started_at: '2026-03-19T04:48:30.279Z',
+    finished_at: '2026-03-19T04:48:31.126Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 16176:0
+2026-03-19T04:48:31.890Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '03470f13-31bd-47d1-8659-50477d49157c',
+      integrations: [Object]
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '03470f13-31bd-47d1-8659-50477d49157c',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-03-19T04:48:30.279Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '03470f13-31bd-47d1-8659-50477d49157c',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'passed',
+      duration_in_ms: 847,
+      started_at: '2026-03-19T04:48:30.279Z',
+      finished_at: '2026-03-19T04:48:31.126Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 16176:0
+2026-03-19T04:48:31.891Z CLI info  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:48:33.179Z CLI info  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-03-19T04:48:33.183Z CLI info  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-03-19T04:48:33.859Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  stopBuild: 5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb request={"finished_at":"2026-03-19T04:48:33.178Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-03-19T04:48:33.860Z CLI info  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:48:34.172Z CLI info [TEST REPORTING AND ANALYTICS:module]  [hemangshucodewal_63nAtw]  [5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb]  [ecd63cd7-6474-4155-a8ac-761e183b8e7d]  Visit https://automation.browserstack.com/builds/5tys7jcrjlfsqkllcfsif9fj0cdm0dgv7fogsweb to view build report, insights, and many more debugging information all at one place!
+2026-03-19T04:54:36.473Z CLI info [main]     Server listening on port: 5400
+2026-03-19T04:54:36.512Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:app":"bs://b70434a34ef12b79737b11fc68f59497e278e4a6","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773896073270","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":false,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T04:54:36.528Z CLI info     Should start debug utility: undefined
+2026-03-19T04:54:36.532Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  Starting testhub from 12696:0
+2026-03-19T04:54:36.533Z CLI info  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-03-19T04:54:36.537Z CLI info  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-03-19T04:54:37.223Z CLI info  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-03-19T04:54:37.223Z CLI info  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-03-19T04:54:37.224Z CLI info  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-03-19T04:54:38.415Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [34df094b-02f9-41b6-9484-e0252f976fce]  startBuild: response=e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg
+2026-03-19T04:54:38.417Z CLI info  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:54:40.608Z CLI info [sdk:service]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Driver initialized as primary driver: platformIndex=0
+2026-03-19T04:54:58.057Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: 'f183c9d1-cc9f-48c3-a66f-d308b244a62c',
+    integrations: { browserstack: [Object] }
+  }
+} to 12696:0
+2026-03-19T04:54:58.061Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'f183c9d1-cc9f-48c3-a66f-d308b244a62c',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-03-19T04:54:58.024Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 12696:0
+2026-03-19T04:54:58.469Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: 'f183c9d1-cc9f-48c3-a66f-d308b244a62c',
+      integrations: [Object]
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'f183c9d1-cc9f-48c3-a66f-d308b244a62c',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-03-19T04:54:58.024Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 12696:0
+2026-03-19T04:54:58.470Z CLI info  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:54:58.895Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.0","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"f183c9d1-cc9f-48c3-a66f-d308b244a62c","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"TODO Application E2E - should create a new task successfully","test_name":"should create a new task successfully","test_code":"async()=>{const addButton=await $('android=new UiSelector().text(\"New Task\")')}","test_file_path":"e2e_tests\\test\\specs\\todo.spec.ts","test_location":"test\\specs\\todo.spec.ts","test_scope":"TODO Application E2E - should create a new task successfully","test_scopes":["TODO Application E2E"],"test_started_at":"2026-03-19T04:54:58.024Z","automate_session_name":"TODO Application E2E - should create a new task successfully","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-03-19T04:54:58.893Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-03-19T04:54:58.896Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'f183c9d1-cc9f-48c3-a66f-d308b244a62c',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'passed',
+    duration_in_ms: 869,
+    started_at: '2026-03-19T04:54:58.024Z',
+    finished_at: '2026-03-19T04:54:58.893Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 12696:0
+2026-03-19T04:55:00.480Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'f183c9d1-cc9f-48c3-a66f-d308b244a62c',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'passed',
+      duration_in_ms: 869,
+      started_at: '2026-03-19T04:54:58.024Z',
+      finished_at: '2026-03-19T04:54:58.893Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 12696:0
+2026-03-19T04:55:00.481Z CLI info  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:55:01.140Z CLI info  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-03-19T04:55:01.144Z CLI info  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-03-19T04:55:01.899Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  stopBuild: e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg request={"finished_at":"2026-03-19T04:55:01.139Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-03-19T04:55:01.901Z CLI info  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:55:02.201Z CLI info [TEST REPORTING AND ANALYTICS:module]  [hemangshucodewal_63nAtw]  [e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg]  [34df094b-02f9-41b6-9484-e0252f976fce]  Visit https://automation.browserstack.com/builds/e9azfrfgesyh6lnmuvynazdadjlo61aeh4us8jlg to view build report, insights, and many more debugging information all at one place!
+2026-03-19T04:58:00.493Z CLI info [main]     Server listening on port: 5400
+2026-03-19T04:58:00.545Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:app":"bs://b70434a34ef12b79737b11fc68f59497e278e4a6","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773896277085","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":false,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T04:58:00.563Z CLI info     Should start debug utility: undefined
+2026-03-19T04:58:00.567Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Starting testhub from 7508:0
+2026-03-19T04:58:00.569Z CLI info  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-03-19T04:58:00.572Z CLI info  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-03-19T04:58:01.268Z CLI info  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-03-19T04:58:01.269Z CLI info  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-03-19T04:58:01.270Z CLI info  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-03-19T04:58:01.439Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [8ecebd5b-41ac-471f-b17d-b79bb943580f]  startBuild: response=o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx
+2026-03-19T04:58:01.441Z CLI info  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:58:03.778Z CLI info [sdk:service]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Driver initialized as primary driver: platformIndex=0
+2026-03-19T04:58:22.473Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '3f767338-c553-4893-8ac9-24bf762cfd3b',
+    integrations: { browserstack: [Object] }
+  }
+} to 7508:0
+2026-03-19T04:58:22.476Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '3f767338-c553-4893-8ac9-24bf762cfd3b',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-03-19T04:58:22.445Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 7508:0
+2026-03-19T04:58:23.363Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.0","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"3f767338-c553-4893-8ac9-24bf762cfd3b","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"TODO Application E2E - should create a new task successfully","test_name":"should create a new task successfully","test_code":"async()=>{const addButton=await $('android=new UiSelector().text(\"New Task\")')}","test_file_path":"e2e_tests\\test\\specs\\todo.spec.ts","test_location":"test\\specs\\todo.spec.ts","test_scope":"TODO Application E2E - should create a new task successfully","test_scopes":["TODO Application E2E"],"test_started_at":"2026-03-19T04:58:22.445Z","automate_session_name":"TODO Application E2E - should create a new task successfully","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-03-19T04:58:23.354Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-03-19T04:58:23.365Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '3f767338-c553-4893-8ac9-24bf762cfd3b',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'passed',
+    duration_in_ms: 909,
+    started_at: '2026-03-19T04:58:22.445Z',
+    finished_at: '2026-03-19T04:58:23.354Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 7508:0
+2026-03-19T04:58:23.537Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '3f767338-c553-4893-8ac9-24bf762cfd3b',
+      integrations: [Object]
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '3f767338-c553-4893-8ac9-24bf762cfd3b',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-03-19T04:58:22.445Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '3f767338-c553-4893-8ac9-24bf762cfd3b',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'passed',
+      duration_in_ms: 909,
+      started_at: '2026-03-19T04:58:22.445Z',
+      finished_at: '2026-03-19T04:58:23.354Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 7508:0
+2026-03-19T04:58:23.541Z CLI info  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T04:58:26.096Z CLI info  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-03-19T04:58:26.099Z CLI info  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-03-19T04:58:26.889Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  stopBuild: o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx request={"finished_at":"2026-03-19T04:58:26.095Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-03-19T04:58:26.891Z CLI info  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T04:58:27.176Z CLI info [TEST REPORTING AND ANALYTICS:module]  [hemangshucodewal_63nAtw]  [o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx]  [8ecebd5b-41ac-471f-b17d-b79bb943580f]  Visit https://automation.browserstack.com/builds/o7aay0jaonxkhxbpfcnohixfynbzyommt1yhzusx to view build report, insights, and many more debugging information all at one place!
+2026-03-19T05:07:09.712Z CLI info [main]     Server listening on port: 5400
+2026-03-19T05:07:09.744Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"platformName":"Android","appium:deviceName":"Google Pixel 8","appium:platformVersion":"14.0","appium:automationName":"UiAutomator2","appium:app":"bs://b70434a34ef12b79737b11fc68f59497e278e4a6","appium:autoGrantPermissions":true,"projectName":"Appium POC","buildName":"Build-1773896826876","sessionName":"Android Automation Test","debug":true,"networkLogs":true,"wdioService":"9.26.0"}],"isNonBstackA11yWDIO":false,"browserstackLocal":false,"accessibility":null,"testObservability":true,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildTag":[]}
+2026-03-19T05:07:09.757Z CLI info     Should start debug utility: undefined
+2026-03-19T05:07:09.759Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Starting testhub from 16392:0
+2026-03-19T05:07:09.760Z CLI info  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-03-19T05:07:09.762Z CLI info  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-03-19T05:07:10.414Z CLI info  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-03-19T05:07:10.414Z CLI info  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-03-19T05:07:10.415Z CLI info  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-03-19T05:07:10.859Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]   [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  startBuild: response=vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht
+2026-03-19T05:07:10.860Z CLI info  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T05:07:12.546Z CLI info [sdk:service]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Driver initialized as primary driver: platformIndex=0
+2026-03-19T05:07:27.973Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: 'c50af732-2868-4361-aeea-651818546eec',
+    integrations: { browserstack: [Object] }
+  }
+} to 16392:0
+2026-03-19T05:07:27.975Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'c50af732-2868-4361-aeea-651818546eec',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-03-19T05:07:27.946Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 16392:0
+2026-03-19T05:07:28.802Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.0","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"c50af732-2868-4361-aeea-651818546eec","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"TODO Application E2E - should create a new task successfully","test_name":"should create a new task successfully","test_code":"async()=>{const addButton=await $('android=new UiSelector().text(\"New Task\")')}","test_file_path":"e2e_tests\\test\\specs\\todo.spec.ts","test_location":"test\\specs\\todo.spec.ts","test_scope":"TODO Application E2E - should create a new task successfully","test_scopes":["TODO Application E2E"],"test_started_at":"2026-03-19T05:07:27.946Z","automate_session_name":"TODO Application E2E - should create a new task successfully","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-03-19T05:07:28.797Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-03-19T05:07:28.805Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'c50af732-2868-4361-aeea-651818546eec',
+    name: 'should create a new task successfully',
+    body: {
+      lang: 'ecmascript',
+      code: `async()=>{const addButton=await $('android=new UiSelector().text("New Task")')}`
+    },
+    identifier: 'should create a new task successfully',
+    scope: 'TODO Application E2E - should create a new task successfully',
+    scopes: [ 'TODO Application E2E' ],
+    file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+    location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+    result: 'passed',
+    duration_in_ms: 851,
+    started_at: '2026-03-19T05:07:27.946Z',
+    finished_at: '2026-03-19T05:07:28.797Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 16392:0
+2026-03-19T05:07:28.916Z CLI info [testhub:request-queue-handler]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: 'c50af732-2868-4361-aeea-651818546eec',
+      integrations: [Object]
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'c50af732-2868-4361-aeea-651818546eec',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-03-19T05:07:27.946Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'c50af732-2868-4361-aeea-651818546eec',
+      name: 'should create a new task successfully',
+      body: [Object],
+      identifier: 'should create a new task successfully',
+      scope: 'TODO Application E2E - should create a new task successfully',
+      scopes: [Array],
+      file_name: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      vc_filepath: 'e2e_tests\\e2e_tests\\test\\specs\\todo.spec.ts',
+      location: 'e2e_tests\\test\\specs\\todo.spec.ts',
+      result: 'passed',
+      duration_in_ms: 851,
+      started_at: '2026-03-19T05:07:27.946Z',
+      finished_at: '2026-03-19T05:07:28.797Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 16392:0
+2026-03-19T05:07:28.917Z CLI info  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-03-19T05:07:31.450Z CLI info  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-03-19T05:07:31.455Z CLI info  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-03-19T05:07:32.232Z CLI info [testhub:module]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  stopBuild: vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht request={"finished_at":"2026-03-19T05:07:31.450Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-03-19T05:07:32.233Z CLI info  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-03-19T05:07:32.515Z CLI info [TEST REPORTING AND ANALYTICS:module]  [hemangshucodewal_63nAtw]  [vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht]  [582b0916-05a3-4c90-9bc9-e9cae09c2b9b]  Visit https://automation.browserstack.com/builds/vgktjdlzewvqse1krkdxpf3bxpbazikldrkueyht to view build report, insights, and many more debugging information all at one place!
