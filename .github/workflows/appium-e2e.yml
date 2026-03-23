@@ -5,6 +5,7 @@ on:
     workflows: ["Android Build Pipeline"]
     types:
       - completed
+    workflow_dispatch:
 
 jobs:
   e2e-tests:

@@ -5,6 +5,7 @@ on:
     workflows: ["Appium E2E Tests"]
     types:
       - completed
+    workflow_dispatch:
 
 jobs:
   send-email:
