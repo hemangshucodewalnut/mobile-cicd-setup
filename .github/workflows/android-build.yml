@@ -2,11 +2,27 @@ name: Android Build Pipeline
 
 on:
   push:
-    branches:
-      - master
+    branches: [master, dev]
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - 'CODEOWNERS'
+      - '.gitignore'
+      - 'screenshots/**'
+      - '.google/**'
+      - 'renovate.json'
+      - 'e2e_tests/**'
   pull_request:
-    branches:
-      - master
+    branches: [master, dev]
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - 'CODEOWNERS'
+      - '.gitignore'
+      - 'screenshots/**'
+      - '.google/**'
+      - 'renovate.json'
+      - 'e2e_tests/**'
 
 jobs:
   build:
