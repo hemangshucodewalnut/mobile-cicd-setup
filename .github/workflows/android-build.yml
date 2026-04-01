@@ -23,6 +23,7 @@ on:
       - '.google/**'
       - 'renovate.json'
       - 'e2e_tests/**'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -55,17 +56,38 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: ${{ runner.os }}-gradle-
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Run Unit Tests
         run: ./gradlew --no-daemon test
 
-      - name: Upload Test Reports
+      - name: Verify Allure Results
+        run: |
+          if [ ! -d "app/build/allure-results" ]; then
+            echo "No Allure results found!"
+            exit 1
+          fi
+
+      - name: Install Allure CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip wget
+          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip
+          unzip allure-2.29.0.zip
+          sudo mv allure-2.29.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+
+      - name: Generate Allure Report
+        run: |
+          allure generate app/build/allure-results --clean -o allure-report
+
+      - name: Upload Allure Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
-          path: app/build/reports/tests/
+          name: allure-report
+          path: allure-report
 
       - name: Build Debug APK
         run: ./gradlew --no-daemon assembleDebug

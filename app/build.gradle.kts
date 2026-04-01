@@ -20,6 +20,8 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.compose.compiler)
+    // allure plugin
+    id("io.qameta.allure") version "2.11.2"
 }
 
 android {
@@ -64,6 +66,19 @@ android {
 
         all { test ->
             with(test) {
+
+                // ✅ Correct modern Gradle way
+                val allureResultsDir = layout.buildDirectory
+                    .dir("allure-results")
+                    .get()
+                    .asFile
+                    .absolutePath
+
+                systemProperty(
+                    "allure.results.directory",
+                    allureResultsDir
+                )
+
                 testLogging {
                     events = setOf(
                         org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED,
@@ -195,4 +210,7 @@ dependencies {
     // AndroidX Test - Hilt testing
     androidTestImplementation(libs.hilt.android.testing)
     kspAndroidTest(libs.hilt.compiler)
+
+    // ✅ Allure for unit tests (JUnit4 compatible)
+    testImplementation("io.qameta.allure:allure-kotlin-commons:2.4.0")
 }
