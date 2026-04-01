@@ -110,7 +110,7 @@ jobs:
           body: |
             Your Allure report is ready:
             
-            https://<your-username>.github.io/<repo-name>/
+            https://hemangshucodewalnut.github.io/mobile-cicd-setup/
 
       - name: Build Debug APK
         run: ./gradlew --no-daemon assembleDebug
