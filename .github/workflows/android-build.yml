@@ -89,6 +89,29 @@ jobs:
           name: allure-report
           path: allure-report
 
+      # ✅ Deploy report to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
+
+      # ✅ Send Email with report link
+      - name: Send Email with Allure Report Link
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Allure Report - Build ${{ github.run_number }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: Github Actions
+          body: |
+            Your Allure report is ready:
+            
+            https://<your-username>.github.io/<repo-name>/
+
       - name: Build Debug APK
         run: ./gradlew --no-daemon assembleDebug
 
